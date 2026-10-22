@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Иван Комраков — студент НИУ ВШЭ, программа «Прикладной анализ данных и искусственный интеллект». Python, Go, образование и достижения.">
+<meta name="color-scheme" content="light">
+<title>Иван Комраков — программирование и анализ данных</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23363c2b'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-size='46' fill='%23f6f4eb' font-family='sans-serif'%3EИК%3C/text%3E%3C/svg%3E">
+<style>
+:root{--paper:#f6f4eb;--ink:#272b24;--muted:#626658;--line:#d9dccd;--green:#363f2b;--accent:#d7ed8c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:32px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid #6d8b28;outline-offset:6px}
+.wrap{max-width:1200px;margin:auto;padding:0 56px}
+.skip{position:absolute;left:12px;top:-100px;background:var(--accent);padding:12px;z-index:10}
+.skip:focus{top:12px}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;font-weight:750;letter-spacing:-.6px}
+.brand span{display:inline-block;background:var(--green);color:var(--paper);padding:3px 9px;margin-right:10px;font-size:13px;border-radius:5px}
+nav{display:flex;gap:26px;font-size:13px}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.hero{padding:88px 0 76px;display:grid;grid-template-columns:1.3fr .85fr;gap:64px;align-items:center}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:650;display:flex;align-items:center;gap:10px}
+.dot{width:7px;height:7px;border-radius:50%;background:#6b823f;display:inline-block}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(54px,6vw,82px);letter-spacing:-4px;line-height:1.04;margin:25px 0}
+h1 em{color:#66734c;font-weight:400}
+.lead{font-size:17px;color:var(--muted);max-width:470px;line-height:1.8}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;border:1px solid var(--green);border-radius:5px;padding:12px 19px;text-decoration:none;font-size:13px;font-weight:600;background:transparent;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--green);color:white}
+.btn:hover{background:var(--accent);color:var(--ink)}
+.note{font-size:11px;color:var(--muted);margin-top:24px}
+.visual{background:#e5e8da;border-radius:160px 160px 14px 14px;min-height:400px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border:1px solid #dce0cf}
+.visual:before{content:'';position:absolute;width:280px;height:280px;border:1px solid #bec6aa;border-radius:50%;top:38px}
+.visual:after{content:'';position:absolute;width:330px;height:330px;border:1px solid #c9d0b7;border-radius:50%;top:13px}
+.monogram{font:italic 110px Georgia,serif;letter-spacing:-15px;color:var(--green);position:relative;z-index:1;padding-right:15px}
+.visual-label{position:absolute;bottom:28px;left:28px;right:28px;border-top:1px solid #bdc5aa;padding-top:15px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.stripe{display:flex;gap:12px 32px;flex-wrap:wrap;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.stripe span:before{content:'↗';margin-right:9px;color:var(--green)}
+section.content{padding:66px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:220px 1fr;gap:30px}
+.section-head .num{font-size:11px;color:var(--muted);letter-spacing:2px}
+h2{font:400 31px Georgia,serif;letter-spacing:-1px;margin:7px 0 15px}
+.section-body>p:first-child{margin-top:0}
+.body-copy{font-size:20px;line-height:1.7;max-width:690px}
+.muted{color:var(--muted)}
+.edu{display:flex;justify-content:space-between;gap:20px;padding-top:25px;margin-top:25px;border-top:1px solid var(--line);font-size:13px}
+.edu strong{display:block;font-size:15px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.skill{border-bottom:1px solid var(--line);padding:0 0 23px;margin-bottom:23px}
+.skill h3{font-size:17px;margin:0 0 9px;font-weight:600}
+.skill p{font-size:13px;margin:0;color:var(--muted)}
+.tag{display:inline-block;font-size:10px;background:#e9ecdf;padding:3px 8px;border-radius:3px;margin-bottom:12px}
+.progress-list{list-style:none;padding:0;margin:0}
+.progress-list li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:21px 0;border-bottom:1px solid var(--line)}
+.progress-list li:first-child{padding-top:0}
+.progress-list li:last-child{border:0;padding-bottom:0}
+.step{font:italic 23px Georgia,serif;color:#879368}
+.progress-list h3{font-size:17px;margin:0 0 6px}
+.progress-list p{font-size:13px;color:var(--muted);margin:0}
+.project{background:var(--green);color:var(--paper);padding:30px;border-radius:8px}
+.project-top{display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#c3ccb1}
+.project h3{font:400 31px Georgia,serif;margin:25px 0 13px}
+.project p{font-size:14px;color:#d2d8c7;max-width:570px}
+.project a{font-size:13px;text-underline-offset:5px}
+.contact{padding:64px 0 70px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact h2{font-size:42px;margin:10px 0}
+.contact p{font-size:14px;color:var(--muted);margin:0}
+footer{padding:22px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:11px}
+.print{font-size:11px;border:0;background:none;color:inherit;font-family:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:850px){.wrap{padding:0 28px}
+.hero{gap:30px;grid-template-columns:1.2fr .8fr;padding:60px 0}
+.visual{min-height:340px}
+.visual:before{width:220px;height:220px}
+.visual:after{width:260px;height:260px}
+.monogram{font-size:90px}
+section.content{grid-template-columns:160px 1fr}
+}
+@media(max-width:620px){.wrap{padding:0 22px}
+header{padding:22px 0}
+nav{gap:14px;font-size:11px}
+nav a:nth-child(2){display:none}
+.brand{font-size:13px}
+.brand span{margin-right:5px}
+.hero{grid-template-columns:1fr;padding:48px 0 40px;gap:32px}
+h1{font-size:62px;letter-spacing:-3px}
+.lead{font-size:16px}
+.visual{min-height:240px;border-radius:120px 120px 10px 10px}
+.visual:before{top:3px}
+.visual:after{top:-17px}
+.monogram{font-size:86px;margin-top:-22px}
+.visual-label{bottom:18px;left:22px;right:22px}
+.stripe{gap:9px 18px;font-size:10px}
+section.content{grid-template-columns:1fr;gap:15px;padding:40px 0}
+.section-head{display:flex;align-items:baseline;gap:16px}
+h2{font-size:29px}
+.body-copy{font-size:18px}
+.skills{gap:0 20px}
+.edu{flex-direction:column;gap:8px}
+.project{padding:23px}
+.contact{display:block;padding:42px 0}
+.contact .btn{margin-top:24px}
+.contact h2{font-size:35px}
+footer{font-size:10px;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+}
+@media print{body{background:white}
+.wrap{padding:0;max-width:none}
+nav,.actions,.visual,.print{display:none}
+.hero{display:block;padding:25px 0}
+h1{font-size:48px}
+.stripe{padding:10px 0}
+section.content{padding:20px 0;break-inside:avoid}
+.contact{padding:20px 0}
+.project{background:white;color:black;border:1px solid #aaa}
+.project p,.project-top{color:#444}
+.contact .btn{display:none}
+footer{padding:10px 0}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<div class="wrap">
+<header>
+<a class="brand" href="#main" aria-label="Иван Комраков — начало страницы">
+<span>ИК</span> Иван Комраков</a>
+<nav aria-label="Основная навигация">
+<a href="#about">Обо мне</a>
+<a href="#skills">Навыки</a>
+<a href="#contact">Контакт ↗</a>
+</nav>
+</header>
+<main id="main">
+<div class="hero">
+<div>
+<div class="eyebrow">
+<span class="dot">
+</span> Студент ВШЭ · 1 курс</div>
+<h1>Данные, код<br>и <em>новые идеи.</em>
+</h1>
+<p class="lead">Я Иван Комраков, студент НИУ ВШЭ. Учусь на программе «Прикладной анализ данных и искусственный интеллект». Развиваю навыки программирования на Python и Go.</p>
+<div class="actions">
+<a class="btn primary" href="#experience">Образование <span aria-hidden="true">↓</span>
+</a>
+<a class="btn" href="https://github.com/komraivan96-spec">GitHub <span aria-hidden="true">↗</span>
+</a>
+</div>
+<p class="note">Учебное портфолио · октябрь 2026</p>
+</div>
+<div class="visual" role="img" aria-label="Монограмма ИК на светлом зелёном фоне">
+<div class="monogram" aria-hidden="true">ик</div>
+<div class="visual-label">
+<span>Ivan Komrakov</span>
+<span>Python · Go ↗</span>
+</div>
+</div>
+</div>
+<div class="stripe" aria-label="Интересы">
+<span>Python и Go</span>
+<span>Анализ данных</span>
+<span>Искусственный интеллект</span>
+</div>
+<section class="content" id="about">
+<div class="section-head">
+<span class="num">01 /</span>
+<h2>Обо мне</h2>
+</div>
+<div class="section-body">
+<p class="body-copy">Изучаю программирование на стыке анализа данных и искусственного интеллекта. Продолжаю обучение в университете после программ Яндекс Лицея и проекта «Код будущего».</p>
+<p class="muted">Мой опыт складывается из дополнительного образования, олимпиадного участия и учебной практики. Здесь собраны основные этапы моего пути и направления, в которых я развиваюсь.</p>
+<div class="edu">
+<div>
+<strong>НИУ «Высшая школа экономики»</strong>
+<span class="muted">Бакалавриат · 1 курс</span>
+</div>
+<span class="muted">Прикладной анализ данных<br>и искусственный интеллект</span>
+</div>
+</div>
+</section>
+<section class="content" id="skills">
+<div class="section-head">
+<span class="num">02 /</span>
+<h2>Навыки</h2>
+</div>
+<div class="section-body skills">
+<article class="skill">
+<span class="tag">Образовательная подготовка</span>
+<h3>Python</h3>
+<p>Завершил обучение программированию на Python в Яндекс Лицее. Продолжаю развивать навыки в университете.</p>
+</article>
+<article class="skill">
+<span class="tag">Образовательная подготовка</span>
+<h3>Go</h3>
+<p>Завершил обучение по программе Яндекс Лицея, посвящённой программированию на Go.</p>
+</article>
+<article class="skill">
+<span class="tag">Практикую</span>
+<h3>Терминал и SSH</h3>
+<p>Работа с файлами и папками в командной строке. Подключение к учебному серверу с использованием SSH-ключа.</p>
+</article>
+<article class="skill">
+<span class="tag">Изучаю</span>
+<h3>Git и веб-инструменты</h3>
+<p>Контроль версий, репозитории GitHub, структура веб-страницы и публикация через GitHub Pages.</p>
+</article>
+</div>
+</section>
+<section class="content" id="experience">
+<div class="section-head">
+<span class="num">03 /</span>
+<h2>Образование<br>и достижения</h2>
+</div>
+<div class="section-body">
+<ol class="progress-list">
+<li>
+<span class="step" aria-hidden="true">01</span>
+<div>
+<h3>НИУ ВШЭ</h3>
+<p>Студент первого курса образовательной программы «Прикладной анализ данных и искусственный интеллект».</p>
+<p>
+<a href="https://spb.hse.ru/ba/dataanalytics/">Об образовательной программе ↗</a>
+</p>
+</div>
+</li>
+<li>
+<span class="step" aria-hidden="true">02</span>
+<div>
+<h3>Яндекс Лицей</h3>
+<p>Успешно завершил образовательные программы по программированию на Python и Go.</p>
+<p>
+<a href="https://lyceum.yandex.ru/">Об образовательном проекте ↗</a>
+</p>
+</div>
+</li>
+<li>
+<span class="step" aria-hidden="true">03</span>
+<div>
+<h3>«Код будущего»</h3>
+<p>Выпускник образовательного проекта «Код будущего».</p>
+<p>
+<a href="https://www.gosuslugi.ru/futurecode">О проекте ↗</a>
+</p>
+</div>
+</li>
+<li>
+<span class="step" aria-hidden="true">04</span>
+<div>
+<h3>Олимпиадное участие</h3>
+<p>Участник регионального этапа Всероссийской олимпиады по предпринимательству.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="content" id="projects">
+<div class="section-head">
+<span class="num">04 /</span>
+<h2>Проект</h2>
+</div>
+<div class="section-body">
+<article class="project">
+<div class="project-top">
+<span>Учебная работа · ОМП</span>
+<span>HTML / CSS</span>
+</div>
+<h3>Это портфолио.</h3>
+<p>Адаптивная страница с информацией об образовании, навыках и достижениях. Учебный проект по курсу «Основы и методология программирования», подготовленный для публикации на GitHub Pages.</p>
+<a href="https://github.com/komraivan96-spec/komraivan96-spec.github.io">Посмотреть исходный код ↗</a>
+</article>
+</div>
+</section>
+<section class="contact" id="contact">
+<div>
+<div class="eyebrow">Продолжение следует</div>
+<h2>Увидимся на GitHub.</h2>
+<p>Здесь будут появляться мои следующие проекты.</p>
+</div>
+<a class="btn primary" href="https://github.com/komraivan96-spec">Открыть профиль <span aria-hidden="true">↗</span>
+</a>
+</section>
+</main>
+<footer>
+<span>© 2026 Иван Комраков</span>
+<span>Сделано с интересом к тому, как всё устроено.</span>
+<button type="button" class="print" onclick="window.print()">Сохранить как PDF</button>
+</footer>
+</div>
+</body>
+</html>
